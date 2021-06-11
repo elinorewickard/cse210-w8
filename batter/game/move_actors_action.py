@@ -42,3 +42,5 @@ class MoveActorsAction(Action):
         y = 1 + (y1 + y2 - 1) % (constants.MAX_Y - 1)
         position = Point(x, y)
         actor.set_position(position)
+
+        #The paddle does not got up or down. It cannot go past x=0 or x=max
