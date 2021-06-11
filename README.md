@@ -42,3 +42,4 @@ root                    (project root folder)
 * # TODO: Add your names and emails here
 Elinore Wickard - ewickard@byui.edu
 David Wells - davidwells@byui.edu
+David Swearingen - davidrs3@byui.edu
