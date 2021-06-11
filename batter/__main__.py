@@ -20,8 +20,9 @@ def main(screen):
     y = int(constants.MAX_Y - 1)
     position = Point(x, y)
     paddle = Actor()
-    paddle.set_text("===========")
+    paddle.set_text("============")
     paddle.set_position(position)
+    paddle.set_x_velocity(10)
     cast["paddle"] = [paddle]
 
     cast["brick"] = []
