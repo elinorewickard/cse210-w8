@@ -85,3 +85,19 @@ class Actor:
             position (Point): The given velocity.
         """
         self._velocity = velocity
+
+    def set_x_velocity(self, x):
+        """Updates the actor's velocity to the given one.
+        
+        Args:
+            position (Point): The given velocity.
+        """
+        self._velocity = Point(x, self._velocity.get_y())
+
+    def set_y_velocity(self, y):
+        """Updates the actor's velocity to the given one.
+        
+        Args:
+            position (Point): The given velocity.
+        """
+        self._velocity = Point(self._velocity.get_x(), y)
