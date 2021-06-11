@@ -1,5 +1,6 @@
 from time import sleep
 from game import constants
+from game.actor import Actor
 
 class Director:
     """A code template for a person who directs the game. The responsibility of 
@@ -25,11 +26,16 @@ class Director:
         
     def start_game(self):
         """Starts the game loop to control the sequence of play."""
-        while True:
+        running = True
+        while running:
             self._cue_action("input")
             self._cue_action("update")
             self._cue_action("output")
+            ball = self._cast["ball"][0]
+            if ball.get_position().get_y() == constants.MAX_Y -1:
+                running = False
             sleep(constants.FRAME_LENGTH)
+        print("HAHA you lost.")
 
     def _cue_action(self, tag):
         """Executes the actions with the given tag.
